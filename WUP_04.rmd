@@ -40,6 +40,8 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 boxplot(WORDSUM~DEGREE,data=mydata)
 ```
 
+Based on this chart, it shows that a fewer population in the Graduate section were reported however they look like the have a higher average on the WORDSUM. After the Graduates, the Bachelors and some junior college students are tied in their average scores. 
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -47,6 +49,8 @@ boxplot(WORDSUM~DEGREE,data=mydata)
 ```{r}
 favstats(WORDSUM~DEGREE,data=mydata)
 ```
+
+This chart summarizes that Graduates have an average of 11 and after that, bachelors and junior college share almost similar results and share the same average of 10. Lastly, LT high school has the lowest average results out of the other groups.
 
 ## Inferential Results
 
@@ -62,6 +66,10 @@ summary.aov(model1)
 plot(TukeyHSD(model1))
 ```
 
+The p-value we have gathered based on out charts is 0.0002 which tells us the chances of this data appearing the same again are low. This is because two groups here have very different means in their results. Our confidence level chart shows us that high school graduate and LT high school graduate are the most different from the other groups listed which are virtually, statistically the same. 
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+The P-value is 0.000236 which means that two out of 10000 times we will get a result that the null hypothesis is true. We won't believe this hypothesis to be true since it happens so infrequently, so we will reject the null hypothesis. To further explain what we're seeing, the results of the TukeyHSD test shows that the WORDSUM test between LT high school and graduates are very different. Also, there's high school and graduates are different too. There is no other Significant differences between the average than those two stated.
